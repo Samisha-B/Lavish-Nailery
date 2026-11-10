@@ -31,12 +31,12 @@ export const config = {
   ],
   timeSlots: ["11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM", "7:00 PM"],
   courses: ["Nail Extensions Basics", "Advanced Nail Art", "Complete Nail Technician"], // TODO: real course names
-  // Add photos to /public/gallery and list them here, e.g. { src: "/gallery/1.jpg", alt: "Pearl & gold nails" }
+  // Photos live directly in /public, e.g. public/1.jpg is served at /1.jpg
   gallery: [
-    { src: "/gallery/1.jpg", alt: "Pearl and gold stud almond nails" },
-    { src: "/gallery/2.jpg", alt: "Soft chrome milky almond nails" },
-    { src: "/gallery/3.jpg", alt: "Nail art" },
-    { src: "/gallery/4.jpg", alt: "Nail art" },
+    { src: "/1.jpg", alt: "Pearl and gold stud almond nails" },
+    { src: "/2.jpg", alt: "Soft chrome milky almond nails" },
+    { src: "/3.jpg", alt: "Nail art" },
+    { src: "/4.jpg", alt: "Nail art" },
   ],
 };
 

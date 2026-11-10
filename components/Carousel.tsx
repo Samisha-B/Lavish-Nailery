@@ -21,7 +21,7 @@ export default function Carousel({ slides }: { slides: Slide[] }) {
 
   return (
     <div
-      className="relative overflow-hidden rounded-2xl border border-gold/30"
+      className="relative overflow-hidden rounded-t-[12rem] rounded-b-3xl border border-gold/40 shadow-lg"
       onMouseEnter={() => (paused.current = true)}
       onMouseLeave={() => (paused.current = false)}
       onTouchStart={(e) => (touchX.current = e.touches[0].clientX)}
@@ -32,11 +32,11 @@ export default function Carousel({ slides }: { slides: Slide[] }) {
         touchX.current = null;
       }}
     >
-      <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${i * 100}%)` }}>
+      <div className="flex transition-transform duration-700 ease-out" style={{ transform: `translateX(-${i * 100}%)` }}>
         {slides.map((s) => (
-          <div key={s.src} className="aspect-[4/5] w-full shrink-0 bg-brown-light md:aspect-[4/3]">
+          <div key={s.src} className="aspect-[4/5] w-full shrink-0 bg-sand">
             {failed[s.src] ? (
-              <div className="flex h-full items-center justify-center font-serif text-gold/60">Photo coming soon</div>
+              <div className="flex h-full items-center justify-center font-serif text-xl italic text-gold/70">Photo coming soon</div>
             ) : (
               <img
                 src={s.src}
@@ -48,11 +48,11 @@ export default function Carousel({ slides }: { slides: Slide[] }) {
           </div>
         ))}
       </div>
-      <button aria-label="Previous" onClick={() => go(-1)} className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-brown-dark/70 px-3 py-2 text-gold">‹</button>
-      <button aria-label="Next" onClick={() => go(1)} className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-brown-dark/70 px-3 py-2 text-gold">›</button>
-      <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2">
+      <button aria-label="Previous" onClick={() => go(-1)} className="absolute left-3 top-1/2 h-9 w-9 -translate-y-1/2 rounded-full bg-ivory/80 text-xl text-gold backdrop-blur">‹</button>
+      <button aria-label="Next" onClick={() => go(1)} className="absolute right-3 top-1/2 h-9 w-9 -translate-y-1/2 rounded-full bg-ivory/80 text-xl text-gold backdrop-blur">›</button>
+      <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
         {slides.map((_, k) => (
-          <button key={k} aria-label={`Slide ${k + 1}`} onClick={() => setI(k)} className={`h-2 w-2 rounded-full ${k === i ? "bg-gold" : "bg-cream/40"}`} />
+          <button key={k} aria-label={`Slide ${k + 1}`} onClick={() => setI(k)} className={`h-1.5 rounded-full transition-all ${k === i ? "w-6 bg-gold" : "w-1.5 bg-ivory/80"}`} />
         ))}
       </div>
     </div>

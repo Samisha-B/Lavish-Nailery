@@ -24,13 +24,13 @@ export default function Booking() {
   };
 
   return (
-    <form onSubmit={submit} className="space-y-4">
+    <form onSubmit={submit} className="space-y-5">
       <div>
         <span className="label">Branch</span>
         <div className="grid grid-cols-2 gap-3">
           {config.branches.map((b) => (
             <button type="button" key={b.id} onClick={() => setBranch(b.name)}
-              className={`rounded-lg border px-4 py-3 ${branch === b.name ? "border-gold bg-gold text-brown-dark" : "border-gold/40"}`}>
+              className={`rounded-xl border px-4 py-3 text-sm transition ${branch === b.name ? "border-gold bg-gold text-ivory" : "border-gold/30 hover:border-gold"}`}>
               {b.name}
             </button>
           ))}

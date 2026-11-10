@@ -5,12 +5,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        brown: { DEFAULT: "#362b28", dark: "#261e1c", light: "#4a3c37" },
-        gold: { DEFAULT: "#a58a52", light: "#d4bd8a" },
-        cream: "#f7efe3",
+        ivory: "#FAF6EF",
+        sand: "#F1E9DC",
+        ink: "#3A2F2B",
+        gold: { DEFAULT: "#A58A52", light: "#C9B27C" },
       },
       fontFamily: {
-        serif: ["Georgia", "Times New Roman", "serif"],
+        serif: ["var(--font-serif)", "Georgia", "serif"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
     },
   },

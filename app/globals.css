@@ -3,9 +3,12 @@
 @tailwind utilities;
 
 html { scroll-behavior: smooth; }
-body { @apply bg-brown text-cream; }
+body { @apply bg-ivory font-sans font-light text-ink; }
 
-.btn-gold { @apply inline-block rounded-full bg-gold px-6 py-3 font-medium text-brown-dark transition hover:bg-gold-light; }
-.btn-outline { @apply inline-block rounded-full border border-gold px-6 py-3 font-medium text-gold transition hover:bg-gold hover:text-brown-dark; }
-.field { @apply w-full rounded-lg border border-gold/40 bg-brown-dark px-4 py-3 text-cream outline-none focus:border-gold; }
-.label { @apply mb-1 block text-xs uppercase tracking-widest text-gold; }
+.btn-gold { @apply inline-block rounded-full bg-gold px-8 py-3 text-sm uppercase tracking-[0.2em] text-ivory transition hover:bg-ink; }
+.btn-outline { @apply inline-block rounded-full border border-gold px-8 py-3 text-sm uppercase tracking-[0.2em] text-gold transition hover:bg-gold hover:text-ivory; }
+.field { @apply w-full rounded-xl border border-gold/30 bg-white/60 px-4 py-3 text-ink outline-none transition focus:border-gold; }
+.label { @apply mb-1 block text-[11px] uppercase tracking-[0.25em] text-gold; }
+.eyebrow { @apply mb-3 block text-center text-[11px] uppercase tracking-[0.4em] text-gold; }
+.h2 { @apply text-center font-serif text-4xl font-light md:text-5xl; }
+.divider { @apply mx-auto my-5 h-px w-16 bg-gold/60; }

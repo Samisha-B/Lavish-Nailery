@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { @apply bg-brown text-cream; }
+
+.btn-gold { @apply inline-block rounded-full bg-gold px-6 py-3 font-medium text-brown-dark transition hover:bg-gold-light; }
+.btn-outline { @apply inline-block rounded-full border border-gold px-6 py-3 font-medium text-gold transition hover:bg-gold hover:text-brown-dark; }
+.field { @apply w-full rounded-lg border border-gold/40 bg-brown-dark px-4 py-3 text-cream outline-none focus:border-gold; }
+.label { @apply mb-1 block text-xs uppercase tracking-widest text-gold; }
